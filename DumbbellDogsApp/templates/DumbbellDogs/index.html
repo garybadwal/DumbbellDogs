@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'DumbbellDogs/CSS/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'DumbbellDogs/CSS/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'DumbbellDogs/CSS/style.css' %}">
+    <link rel="stylesheet" href="https:cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+
+    <!-- title -->
+    <title>DumbbellDogs - {{ page_title }}</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'DumbbellDogs/Images/fav.png' %}">
+</head>
+
+<body class="bg-white font color-theme-red">
+
+    <button type="button" class="btn btn-floating btn-lg bg-current text-white rounded-circle" id="btn-back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    {% include 'DumbbellDogs/base/navbar.html' %}
+
+    <div class="container-fluid" id="home-section">
+        <div class="container p-0 py-5 p-lg-5">
+            <div class="row justify-content-center p-0 p-lg-5">
+                <img src="{% static 'DumbbellDogs/Images/land-page.png' %}" alt="LOGO" class="land-page">
+            </div>
+            <div class="row justify-content-center p-5">
+                <p class="display-6 font-logo text-center text-muted  tag-line">Be Loyal to your GYM</p>
+            </div>
+            <div class="row justify-content-center p-3 p-lg-5 gap-4 gap-lg-0">
+                <div class="col-12 col-lg-6 text-center text-lg-end"><a href="#shop-section"
+                        class="btn bg-current text-white shadow border-0 px-5 py-3 rounded-pill fw-bold fs-6">Shop Now
+                        <i class="bi bi-arrow-right"></i></a></div>
+                <div class="col-12 col-lg-6 text-center text-lg-start"><a href="/#about-section"
+                        class="btn bg-white text-current shadow border-0 px-5 py-3 rounded-pill fw-bold fs-6">About Us
+                        <i class="bi bi-arrow-right"></i></a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid overflow-hidden " id="shop-section">
+        <div class="container p-0 py-5 p-lg-5">
+            <div class="row">
+                <div class="col-12 text-center py-5">
+                    <h2 class="display-6 lh-1   text-current font-logo">New Arrivals</h2>
+                </div>
+                <div class="col-12 py-5">
+                    <div class="new-arrivals owl-carousel owl-theme overflow-visible">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center py-5">
+                    <h2 class="display-6 lh-1   text-current font-logo">Shop by Categories</h2>
+                </div>
+                <div class="col-12 py-5">
+                    <div class="row dynamic-shop">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid overflow-hidden " id="partners-section">
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-12 text-center py-5">
+                    <h2 class="display-6 lh-1   text-current font-logo">Premium Partners</h2>
+                </div>
+                <div class="col-12 py-5">
+                    <div class="brands owl-carousel owl-theme overflow-visible">
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/bm.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/gnc.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/MB.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/mt.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/roy.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid overflow-hidden " id="about-section">
+        <div class="container p-lg-5 pt-0 p-2">
+            <div class="row">
+                <div class="col-12 text-center py-5">
+                    <h2 class="display-6 lh-1   text-current font-logo">Certified By</h2>
+                </div>
+                <div class="col-12 py-5">
+                    <div class="certified owl-carousel owl-theme overflow-visible">
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/brand-1.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/brand-2.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/brand-3.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/brand-4.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/brand-5.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                        <div class="owl-items text-center"><img src="{% static 'DumbbellDogs/Images/brand-6.png' %}"
+                                alt="icon" class="brand-img ms-auto me-auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center py-5">
+                    <h2 class="display-6 lh-1   text-current font-logo">We are best at</h2>
+                </div>
+                <div class="col-12 py-5 p-0">
+                    <div class="row gap-5 gap-lg-0">
+                        <div class="col-12 col-lg-4">
+                            <div class="container rounded-4 shadow-lg card border-0 p-5 about-card">
+                                <div class="row justify-content-center mb-3">
+                                    <div class="cirlce mb-3">
+                                        <i class="bi bi-patch-check bg-current text-white h-auto p-4 fs-2"></i>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <p class="fw-bold fs-5">Certified products</p>
+                                </div>
+                                <div class="row">
+                                    <p class="text-muted lh-lg text-center">We are digital agency, a small design agency
+                                        based in
+                                        paris as i was
+                                        groping to remove through language.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="container rounded-4 shadow-lg card border-0 p-5 about-card">
+                                <div class="row justify-content-center mb-3">
+                                    <div class="cirlce mb-3">
+                                        <i class="bi bi-wallet2 bg-current text-white p-4 fs-2"></i>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <p class="fw-bold fs-5">Budget Friendy</a>
+                                </div>
+                                <div class="row">
+                                    <p class="text-muted lh-lg text-center">We are digital agency, a small design agency
+                                        based in
+                                        paris as i was
+                                        groping to remove through language.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="container rounded-4 shadow-lg card border-0 p-5 about-card">
+                                <div class="row justify-content-center mb-3">
+                                    <div class="cirlce mb-4">
+                                        <i class="bi bi-bar-chart bg-current text-white p-4 fs-2"></i>
+                                    </div>
+                                </div>
+                                <div class="row text-center">
+                                    <p class="fw-bold fs-6">Improved Performance</p>
+                                </div>
+                                <div class="row">
+                                    <p class="text-muted lh-lg text-center">We are digital agency, a small design agency
+                                        based in
+                                        paris as i was
+                                        groping to remove through language.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid overflow-hidden " id="contact-section">
+        <div class="container p-lg-5 pt-0 p-2">
+            <div class="row mb-3 gap-5 gap-lg-0">
+                <div class="col-12 text-center py-5">
+                    <h2 class="display-6 lh-1   text-current font-logo">Contact Us</h2>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h2 class="display-6 lh-1 text-current mb-5 text-lg-start text-center font-logo">Send a Message!
+                    </h2>
+                    <form action="">
+                        <div class="input-group mb-4 shadow">
+                            <span class="input-group-text border-0  bg-white p-3" id="basic-addon1"><i
+                                    class="bi bi-person text-current fw-bold"></i></span>
+                            <input type="text" class="form-control border-0 p-3" placeholder="Name"
+                                aria-label="Name" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-4 shadow">
+                            <span class="input-group-text border-0 bg-white p-3" id="basic-addon2"><i
+                                    class="bi bi-envelope text-current fw-bold"></i></span>
+                            <input type="email" class="form-control border-0 p-3" placeholder="Email"
+                                aria-label="Email" aria-describedby="basic-addon2">
+                        </div>
+                        <div class="input-group mb-4 shadow">
+                            <textarea class="form-control border-0 p-3" aria-label="Message"
+                                placeholder="Message"></textarea>
+                        </div>
+                        <input type="submit" class="btn bg-current text-white fw-bold shadow-hover" value="Say hello!">
+                    </form>
+                </div>
+                <div class="col-12 col-lg-2 d-none d-lg-flex"></div>
+                <div class="col-12 col-lg-6">
+                    <div class="shadow-lg">
+                        <iframe
+                            src="https:www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13714.848685281991!2d76.63938750440214!3d30.75458550499993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ff1b06c15d0d3%3A0x1a1322a76885d675!2sPassionate%20Fitness%20Gym!5e0!3m2!1sen!2sin!4v1656662122571!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%"
+                            height="600"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5 pb-2 footer-section bg-current-light">
+        <div class="container pt-5">
+            <div class="row border-bottom seperation pb-5">
+                <div class="col-12 col-lg-4 col-xl-4 col-xxl-4">
+                    <div class="row">
+                        <a href="#" class="font-logo display-6 text-decoration-none text-current"><img
+                                src="{% static 'DumbbellDogs/Images/logo.svg' %}" alt="LOGO"
+                                class="logo ms-4 ms-lg-5 "><br>DumbbellDogs</a>
+                        <p class="text-muted xx-small-text lh-lg mt-5">41 madison ave, floor 24 new work,<br>NY 10010
+                            1-877-932-7111<br>support@mail.com</p>
+                    </div>
+                    <div class="row">
+                        <ul class="list-inline">
+                            <li class="list-inline-item me-3"><a href="" class="text-decoration-none"><i
+                                        class="ti-facebook text-muted"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="https:www.instagram.com/gary_badwal/"
+                                    class="text-decoration-none"><i class="ti-instagram text-muted"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="" class="text-decoration-none"><i
+                                        class="ti-linkedin text-muted"></i></a></li>
+                            <li class="list-inline-item me-3"><a href="" class="text-decoration-none"><i
+                                        class="ti-twitter text-muted"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 col-xl-2 col-xxl-2">
+                    <h5 class="text-current">Categories</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">English</a>
+                        </li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Spanish</a>
+                        </li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Arab</a></li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Urdu</a></li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Brazil</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 col-xl-2 col-xxl-2">
+                    <h5 class="text-current">Channel</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Makeup</a>
+                        </li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Dresses</a>
+                        </li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Girls</a></li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Sandals</a>
+                        </li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Headphones</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 col-xl-2 col-xxl-2">
+                    <h5 class="text-current">About</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">FAQ</a></li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Term of
+                                use</a></li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Privacy
+                                Policy</a></li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Feedback</a>
+                        </li>
+                        <li class="mt-2"><a href="#" class="text-decoration-none text-muted x-small-text">Careers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-2 col-xl-2 col-xxl-2">
+                    <h5 class="mb-3 text-current">Connect With us:</h5>
+                    <ul class="list-unstyled d-flex gap-3">
+                        <li><a href="#" class="fs-3 text-current"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="#" class="fs-3 text-current"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#" class="fs-3 text-current"><i class="bi bi-twitter"></i></a></li>
+                        <li><a href="#" class="fs-3 text-current"><i class="bi bi-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- footer 1 ends -->
+            <!-- footer 2 starts -->
+            <div class="row mt-4 text-center">
+                <div class="col-12">
+                    <p class="text-muted x-small-text">©
+                        <script>document.write(new Date().getFullYear())</script> copyright. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <p class="text-muted x-small-text">Powered by<br><a
+                            href="https:www.instagram.com/passionate_fitness01/"
+                            class="company font-logo nav-link text-decoration-none">Team Passionate</a></p>
+                </div>
+            </div>
+            <!-- footer 2 ends -->
+        </div>
+    </div>
+
+    <script type="text/javascript"> 
+        var csrfmiddlewaretoken = "{{csrf_token}}";
+     </script> 
+
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'DumbbellDogs/JS/bootstrap.bundle.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.all.min.js"></script>
+    <script src="{% static 'DumbbellDogs/JS/owl.carousel.js' %}"></script>
+    <script src="{% static 'DumbbellDogs/JS/script.js' %}"></script>
+</body>
+
+</html>

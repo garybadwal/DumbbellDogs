@@ -1,0 +1,70 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg bg-white">
+    <div class="container py-3 p-0 justify-content-center">
+        <div class="row w-100">
+            <div class="col-12 col-lg-4">
+                <div class="row w-100">
+                    <div class="col-6">
+                        <a class="navbar-brand ms-5" href="#">
+                            <img src="{% static 'DumbbellDogs/Images/logo.svg' %}" alt="LOGO" class="logo">
+                        </a>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <button class="navbar-toggler border-0 btn-outline-light shadow-none" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bolder" aria-current="page" href="/#home-section"><i
+                                    class="bi bi-house fw-bolder"></i> HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bolder" aria-current="page" href="/#shop-section"><i
+                                    class="bi bi-bag fw-bolder"></i>
+                                SHOP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bolder" aria-current="page" href="/#partners-section"><i
+                                    class="bi bi-stars fw-bolder"></i> PREMIUM PARTNER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bolder" aria-current="page" href="/#about-section"><i
+                                    class="bi bi-people fw-bolder "></i> ABOUT US</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bolder" aria-current="page" href="/#contact-section"><i
+                                    class="bi bi-voicemail fw-bolder"></i> CONTACTS US</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link fw-bolder dropdown-toggle" href="{% url 'DumbbellDogs:login_form' %}" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person fw-bolder"></i>
+                                MY ACCOUNT
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item fw-bolder" href="{% url 'DumbbellDogs:mycart' %}"><i class="bi bi-cart"></i> My Cart</a></li>
+                                <li><a class="dropdown-item fw-bolder" href="{% url 'DumbbellDogs:myorders' %}"><i class="bi bi-receipt"></i> My Order</a></a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                {% if request.user.is_authenticated %}
+                                    <li><a class="dropdown-item fw-bolder logout" href="{% url 'DumbbellDogs:logout_user'%}"><i class="bi bi-box-arrow-in-left"></i> Log out</a></li>
+                                {% else %}
+                                    <li><a class="dropdown-item fw-bolder" href="{% url 'DumbbellDogs:login_form' %}"><i class="bi bi-box-arrow-in-right"></i> Log in</a></li>
+                                    <li><a class="dropdown-item fw-bolder" href="{% url 'DumbbellDogs:register' %}"><i class="bi bi-person-plus"></i> Sign Up</a></li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

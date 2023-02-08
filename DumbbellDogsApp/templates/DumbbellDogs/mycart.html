@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'DumbbellDogs/CSS/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'DumbbellDogs/CSS/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'DumbbellDogs/CSS/style.css' %}">
+    <link rel="stylesheet" href="https:cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+
+    <!-- title -->
+    <title>DumbbellDogs - {{ page_title }}</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'DumbbellDogs/Images/fav.png' %}">
+</head>
+
+<body class="bg-white font color-theme-red">
+
+    <button type="button" class="btn btn-floating btn-lg bg-current text-white rounded-circle" id="btn-back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    {% include 'DumbbellDogs/base/navbar.html' %}
+
+    <div class="container-fluid checkout-step active">
+        <div class="container py-lg-5 mt-5">
+            <div class="row gap-5 gap-lg-3 justify-content-center">
+                <div class="col-12 col-lg-3">
+                    <div class="row bg-light py-5 px-2 shadow rounded-4">
+                        <div class="row mb-3">
+                            <h2 class="display-6 text-current fw-bold">Summary</h2>
+                            <hr class="border-current bg-current" style="width: 50%;margin-left: 10px;">
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="fs-6 fw-bold text-muted">Order Total:</p>
+                            <p class="text-end order-total text-current">&#8377 </p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="fs-6 fw-bold text-muted">Promo Code:</p>
+                            <p class="text-end text-current">Not applied</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="fs-6 fw-bold text-muted">Shipping:</p>
+                            <p class="text-end text-current">&#8377 54</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <p class="fs-6 fw-bold text-muted">Total:</p>
+                            <p class="text-end total-price text-current fw-bold">&#8377 </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                    <div class="row p-5 shadow rounded-4 d-none d-lg-block">
+                        <div class="row">
+                            <h2 class="display-6 text-current fw-bold">My Cart</h2>
+                            <hr class="border-current bg-current" style="width: 13%;margin-left: 10px;">
+                        </div>
+                        <table class="mt-3 mycart-lg">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col" class="text-center text-muted">Products</th>
+                                    <th scope="col" class="text-center text-muted">Quantity</th>
+                                    <th scope="col" class="text-center text-muted">Price</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="row py-5 ps-2 shadow rounded-4 d-block d-lg-none mb-5">
+                        <div class="row mb-3">
+                            <h2 class="display-6 text-current fw-bold">My Cart</h2>
+                            <hr class="border-current bg-current" style="width: 13%;margin-left: 10px;">
+                        </div>
+                        <div class="row justify-content-center mycart-sm">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-lg-end justify-content-center mb-3 pe-4 py-2">
+                    <a class="btn bg-current text-white px-3 py-2 border-0 rounded-3 col-6 col-lg-2 shadow-hover me-5 next">Checkout
+                        <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid checkout-step">
+        <div class="container py-lg-5 mt-5">
+            <div class="row justify-content-center">
+                <div class="row mb-3">
+                    <h2 class="display-6 text-current fw-bold">Select Delivery Address</h2>
+                    <hr class="border-current bg-current" style="width: 40%;margin-left: 10px;">
+                </div>
+                <div class="row justify-content-lg-end justify-content-center mb-3">
+                    <a class="btn bg-current text-white px-3 py-2 border-0 rounded-3 col-6 col-lg-2 shadow-hover"><i
+                            class="bi bi-plus fw-bold"></i> Add new Address</a>
+                </div>
+                <div class="row mb-4 dynamic-address-row">
+                    
+                </div>
+                <div class="row justify-content-lg-between justify-content-center mb-3 gap-3">
+                    <a class="btn bg-current text-white px-3 py-2 border-0 rounded-3 col-6 col-lg-2 shadow-hover back"><i class="bi bi-arrow-left"></i>Back</a>
+                    <a class="btn bg-current text-white px-3 py-2 border-0 rounded-3 col-6 col-lg-2 shadow-hover next">Proceed
+                        <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid checkout-step">
+        <div class="container py-lg-5 mt-5">
+            <div class="row justify-content-center">
+                <div class="row mb-4">
+                    <h2 class="display-6 text-current fw-bold">Select Payment Method</h2>
+                    <hr class="border-current bg-current" style="width: 30%;margin-left: 10px;">
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="{% static 'DumbbellDogs/Images/cod.png' %}" alt="" style="
+                        width: -webkit-fill-available;
+                    ">
+                    </div>
+                    <div class="col-lg-6 pt-lg-4">
+                        <div class="accordion mb-3" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button fw-bold text-muted" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne" disabled>
+                                        Cards (comming soon)
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed fw-bold text-muted" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo" disabled>
+                                        UPI (comming soon)
+                                    </button>
+                                </h2>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed fw-bold text-current" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Cash On Delivery
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body p-5">
+                                        <div class="row px-5 py-4 rounded-4 shadow d-flex justify-content-between">
+                                            <div class="form-check col-6 py-2">
+                                                <input class="form-check-input" type="radio" name="paymentRadio"
+                                                    id="paymentRadio" value="Cash on delivery" checked>
+                                                <label class="form-check-label fw-bold" for="paymentRadio">
+                                                    Cash on delivery
+                                                </label>
+                                            </div>
+                                            <i class="bi bi-cash col-6 text-end fw-bold fs-4"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-lg-between justify-content-center mb-3 gap-3">
+                        <a class="btn bg-current text-white px-3 py-2 border-0 rounded-3 col-6 col-lg-2 shadow-hover back"><i class="bi bi-arrow-left"></i>Back</a>
+                        <a class="btn bg-current text-white px-3 py-2 border-0 rounded-3 col-6 col-lg-2 shadow-hover submit">Place
+                            order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var csrfmiddlewaretoken = "{{csrf_token}}";
+    </script>
+
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'DumbbellDogs/JS/bootstrap.bundle.js' %}"></script>
+    <script src="{% static 'DumbbellDogs/JS/owl.carousel.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.20/dist/sweetalert2.all.min.js"></script>
+    <script src="{% static 'DumbbellDogs/JS/cart_script.js' %}"></script>
+</body>
+
+</html>
